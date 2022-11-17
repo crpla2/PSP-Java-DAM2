@@ -61,7 +61,7 @@ public class Programa {
 		lista.forEach(x->{
 			try {
 				x.join();
-			} catch (InterruptedException e) {
+			} catch (InterruptedException e) { 
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -72,7 +72,7 @@ public class Programa {
 		System.out.println(puertoBilbao);
 		System.out.println(puertoTanger);
 		System.out.println(puertoMarsella);
-
+        System.out.println(puertoGenova);
 		System.out.println(mina);
 	}
 }
