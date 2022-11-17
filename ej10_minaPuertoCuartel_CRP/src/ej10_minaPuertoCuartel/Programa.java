@@ -6,12 +6,12 @@ public class Programa {
 	public static void main(String[] args) throws InterruptedException {
 		ArrayList<Thread>lista=new ArrayList<>();
 		Mina mina = new Mina(0);
-		Puerto puertoAlgeciras = new Puerto(0, mina, "Algeciras");
-		Puerto puertoBarcelona = new Puerto(0, mina, "Barcelona");
-		Puerto puertoBilbao = new Puerto(0, mina, "Bilbao");
-		PuertoSubcontratado puertoTanger = new PuertoSubcontratado(0, "Tanger", mina);
-		PuertoSubcontratado puertoMarsella = new PuertoSubcontratado(0, "Marsella", mina);
-		PuertoSubcontratado puertoGenova = new PuertoSubcontratado(0, "Genova", mina);
+		Puerto puertoAlgeciras = new Puerto(0, mina, "Algeciras");//Implementa Runnable puede generar varios hilos
+		Puerto puertoBarcelona = new Puerto(0, mina, "Barcelona");//Implementa Runnable puede generar varios hilos
+		Puerto puertoBilbao = new Puerto(0, mina, "Bilbao");//Implementa Runnable puede generar varios hilos
+		PuertoSubcontratado puertoTanger = new PuertoSubcontratado(0, "Tanger", mina);//Hereda de Thread, cada objeto es un hilo.
+		PuertoSubcontratado puertoMarsella = new PuertoSubcontratado(0, "Marsella", mina);//Hereda de Thread, cada objeto es un hilo.
+		PuertoSubcontratado puertoGenova = new PuertoSubcontratado(0, "Genova", mina);//Hereda de Thread, cada objeto es un hilo.
 		
 		System.out.println(mina);
 		Thread hiloMinero = new Thread(new Minero(mina));
