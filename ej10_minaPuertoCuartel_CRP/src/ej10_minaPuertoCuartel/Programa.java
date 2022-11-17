@@ -15,7 +15,7 @@ public class Programa {
 		
 		System.out.println(mina);
 		Thread hiloMinero = new Thread(new Minero(mina));
-		Thread hiloMinero2 = new Thread(new Minero(mina, 3000));
+		Thread hiloMinero2 = new Thread(new Minero(mina, 2000));
 		hiloMinero.start();
 		hiloMinero2.start();
 		

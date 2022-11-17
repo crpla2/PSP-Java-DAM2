@@ -7,7 +7,7 @@ public class Minero implements Runnable {
 	public Minero(Mina mina) {
 		super();
 		this.mina = mina;
-		this.tiempoMinado = 5000;
+		this.tiempoMinado = 3000;
 	}
 	public Minero(Mina mina, int tiempoMinado) {
 		super();
