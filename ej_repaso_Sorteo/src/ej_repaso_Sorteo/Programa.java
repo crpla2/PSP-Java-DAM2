@@ -25,10 +25,8 @@ public class Programa {
 		
 		for(Participante p:lista) {
 				synchronized (p) {
-					p.notify();
-					
-					
-					}
+					p.notify();					
+				}
 		}	
 		
 		lista.forEach(x->{
