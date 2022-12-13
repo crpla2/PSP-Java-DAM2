@@ -20,6 +20,13 @@ public class DateTextServerMulticlient {
 			sock = servSock.accept();
 			DataOutputStream salida = new DataOutputStream(sock.getOutputStream());
 			Date fecha = new Date();
+			//Simulamos un retardo en el cálculo
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO: handle exception
+			}
+			
 			salida.writeUTF(String.valueOf(fecha.toString()));
 			salida.close();
 			sock.close();
