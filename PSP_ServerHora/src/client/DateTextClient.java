@@ -16,7 +16,7 @@ public class DateTextClient {
 		//Socket paso a paso
 		//Preparo el socket
 		Socket sock= new Socket();
-		SocketAddress sockAddr = new InetSocketAddress("localhost",server.DateTextServer.PORT);
+		SocketAddress sockAddr = new InetSocketAddress("192.168.101.100",server.DateTextServer.PORT);
 		//Intento conexion estableciendo un timeout de 6 segundos
 		sock.connect(sockAddr,6000);
 		
