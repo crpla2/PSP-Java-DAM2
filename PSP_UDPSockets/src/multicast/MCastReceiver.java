@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
+import java.net.NetworkInterface;
 
 public class MCastReceiver {
 	public static void main(String[] args) throws IOException {
@@ -11,6 +12,7 @@ public class MCastReceiver {
 		MulticastSocket mCastSock = new MulticastSocket(3000);
 		InetAddress ipGrupo = InetAddress.getByName("224.0.0.1");
 		mCastSock.joinGroup(ipGrupo);
+		
 
 		while (true) {
 			byte[] arrayDeBytes = new byte[1000];
