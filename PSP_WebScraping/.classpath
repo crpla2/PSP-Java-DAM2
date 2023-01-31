@@ -6,9 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/DAM2Alu10/Downloads/jsoup-1.15.3.jar">
+	<classpathentry kind="lib" path="librerias/jsoup-1.15.3.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/DAM2Alu10/Downloads/jsoup-1.15.3-javadoc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:file:/C:/Program%20Files/eclipse/!/PSP_WebScraping/librerias/jsoup-1.15.3-javadoc.jar"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
