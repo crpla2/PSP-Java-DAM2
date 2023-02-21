@@ -1,16 +1,36 @@
 package aemet;
 
+import java.util.Date;
+
+class Geo850{
+	private float value;
+	private boolean present;
+	public float getValue() {
+		return value;
+	}
+	public void setValue(float value) {
+		this.value = value;
+	}
+	public boolean isPresent() {
+		return present;
+	}
+	public void setPresent(boolean present) {
+		this.present = present;
+	} 
+}
+
+
 public class EstacionMeteo {
 	private String idema;
 	private float lon;
 	private float lat;
 	private float alt;
 	private String ubi;
-	private String fint;
+	private Date fint;
 	private float prec;
 	private float pacutp;
-	private float pliqtp;
-	private float psolt;
+	private float pliqt;
+	private float psoltp;
 	private float vmax;
 	private float vv;
 	private float vmaxu;
@@ -20,13 +40,13 @@ public class EstacionMeteo {
 	private float dmax;
 	private float dmaxu;
 	private float stdvv;
-	private float stdv;
+	private float stddv;
 	private float stdvvu;
 	private float stddvu;
 	private float hr;
 	private float inso;
 	private float pres;
-	private float pres_mar;
+	private float pres_nmar;
 	private float ts;
 	private float tss20cm;
 	private float tss5cm;
@@ -36,7 +56,7 @@ public class EstacionMeteo {
 	private float tamax;
 	private float vis;
 	private float geo700;
-	private float geo850;
+	private Geo850 geo850;
 	private float geo925;
 	private float rviento;
 	private float nieve;
@@ -70,10 +90,10 @@ public class EstacionMeteo {
 	public void setUbi(String ubi) {
 		this.ubi = ubi;
 	}
-	public String getFint() {
+	public Date getFint() {
 		return fint;
 	}
-	public void setFint(String fint) {
+	public void setFint(Date fint) {
 		this.fint = fint;
 	}
 	public float getPrec() {
@@ -88,17 +108,17 @@ public class EstacionMeteo {
 	public void setPacutp(float pacutp) {
 		this.pacutp = pacutp;
 	}
-	public float getPliqtp() {
-		return pliqtp;
+	public float getPliqt() {
+		return pliqt;
 	}
-	public void setPliqtp(float pliqtp) {
-		this.pliqtp = pliqtp;
+	public void setPliqt(float pliqtp) {
+		this.pliqt = pliqtp;
 	}
-	public float getPsolt() {
-		return psolt;
+	public float getPsoltp() {
+		return psoltp;
 	}
-	public void setPsolt(float psolt) {
-		this.psolt = psolt;
+	public void setPsoltp(float psolt) {
+		this.psoltp = psolt;
 	}
 	public float getVmax() {
 		return vmax;
@@ -154,11 +174,11 @@ public class EstacionMeteo {
 	public void setStdvv(float stdvv) {
 		this.stdvv = stdvv;
 	}
-	public float getStdv() {
-		return stdv;
+	public float getStddv() {
+		return stddv;
 	}
-	public void setStdv(float stdv) {
-		this.stdv = stdv;
+	public void setStddv(float stdv) {
+		this.stddv = stdv;
 	}
 	public float getStdvvu() {
 		return stdvvu;
@@ -190,11 +210,11 @@ public class EstacionMeteo {
 	public void setPres(float pres) {
 		this.pres = pres;
 	}
-	public float getPres_mar() {
-		return pres_mar;
+	public float getPres_nmar() {
+		return pres_nmar;
 	}
-	public void setPres_mar(float pres_mar) {
-		this.pres_mar = pres_mar;
+	public void setPres_nmar(float pres_mar) {
+		this.pres_nmar = pres_mar;
 	}
 	public float getTs() {
 		return ts;
@@ -250,10 +270,10 @@ public class EstacionMeteo {
 	public void setGeo700(float geo700) {
 		this.geo700 = geo700;
 	}
-	public float getGeo850() {
+	public Geo850 getGeo850() {
 		return geo850;
 	}
-	public void setGeo850(float geo850) {
+	public void setGeo850(Geo850 geo850) {
 		this.geo850 = geo850;
 	}
 	public float getGeo925() {
@@ -274,4 +294,16 @@ public class EstacionMeteo {
 	public void setNieve(float nieve) {
 		this.nieve = nieve;
 	}
+	@Override
+	public String toString() {
+		return "EstacionMeteo [idema=" + idema + ", lon=" + lon + ", lat=" + lat + ", alt=" + alt + ", ubi=" + ubi
+				+ ", fint=" + fint + ", prec=" + prec + ", pacutp=" + pacutp + ", pliqt=" + pliqt + ", psoltp=" + psoltp
+				+ ", vmax=" + vmax + ", vv=" + vv + ", vmaxu=" + vmaxu + ", vvu=" + vvu + ", dv=" + dv + ", dvu=" + dvu
+				+ ", dmax=" + dmax + ", dmaxu=" + dmaxu + ", stdvv=" + stdvv + ", stddv=" + stddv + ", stdvvu=" + stdvvu
+				+ ", stddvu=" + stddvu + ", hr=" + hr + ", inso=" + inso + ", pres=" + pres + ", pres_nmar=" + pres_nmar
+				+ ", ts=" + ts + ", tss20cm=" + tss20cm + ", tss5cm=" + tss5cm + ", ta=" + ta + ", tpr=" + tpr
+				+ ", tamin=" + tamin + ", tamax=" + tamax + ", vis=" + vis + ", geo700=" + geo700 + ", geo850=" + geo850
+				+ ", geo925=" + geo925 + ", rviento=" + rviento + ", nieve=" + nieve + "]";
+	}
+	
 }
