@@ -6,5 +6,5 @@ public interface AulaService {
 	
 	public S_Aula mostrarAulaId(long id);
 	
-
+	public S_Aula guardarAula(S_Aula aula);
 }

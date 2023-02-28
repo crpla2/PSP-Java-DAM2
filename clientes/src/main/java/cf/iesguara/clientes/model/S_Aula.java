@@ -23,5 +23,4 @@ public class S_Aula {
 	@Column
 	private int ordenadores;
 	
-
 }
