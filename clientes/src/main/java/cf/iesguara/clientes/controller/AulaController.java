@@ -1,6 +1,8 @@
 package cf.iesguara.clientes.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -36,9 +38,13 @@ public class AulaController {
 	
 	@PostMapping
 	public ResponseEntity<S_Aula> guardarAula(@RequestBody S_Aula aula){
-		return new ResponseEntity<S_Aula>(aula, HttpStatus.CREATED);
+		return new ResponseEntity<S_Aula>(aulaService.guardarAula(aula), HttpStatus.CREATED);
 		
 	}
 	
-	
+	@GetMapping
+	public ResponseEntity<List <S_Aula>> mostrarAulas(){
+		return new ResponseEntity<List<S_Aula>>(aulaService.mostrarAulas(),HttpStatus.OK);
+		
+	}
 }
