@@ -11,8 +11,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name= "Sclientes")
-public class S_Cliente {
+@Table(name= "pspcliente")
+public class PSPCliente {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private long id;
